@@ -2,7 +2,7 @@ version: '3.4'
 
 services:
   iproyal-pawns:
-    image: scottyhardy/docker-wine:latest  
+    image: scottyhardy/docker-wine:latest
     environment:
       RDP_SERVER: "no"
       USE_XVFB: "yes"
@@ -16,7 +16,9 @@ services:
       - ./Downloads:/home/wineuser/Downloads
       - ./session:/home/wineuser/.wine/drive_c/users/wineuser/Application Data/ip_royal_paws
       - ./program:/home/wineuser/.wine/drive_c/Program Files (x86)/IPRoyalPawns
+    restart: always
     # ports:
     #   - 3389:3389
+
     command: wine /home/wineuser/.wine/drive_c/Program\ Files\ (x86)/IPRoyalPawns/iproyal_pawns.exe
 
