@@ -19,6 +19,5 @@ services:
     restart: always
     # ports:
     #   - 3389:3389
-
     command: wine /home/wineuser/.wine/drive_c/Program\ Files\ (x86)/IPRoyalPawns/iproyal_pawns.exe
 
