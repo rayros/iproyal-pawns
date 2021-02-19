@@ -1,0 +1,22 @@
+version: '3.4'
+
+services:
+  iproyal-pawns:
+    image: scottyhardy/docker-wine:latest  
+    environment:
+      RDP_SERVER: "no"
+      USE_XVFB: "yes"
+      USER_UID: 1000
+      USER_GID: 1000
+      XVFB_RESOLUTION: "320x240x8"
+      XVFB_SCREEN: 0"
+      XVFB_SERVER: ":95"
+      DISPLAY: ":95"
+    volumes:
+      - ./Downloads:/home/wineuser/Downloads
+      - ./session:/home/wineuser/.wine/drive_c/users/wineuser/Application Data/ip_royal_paws
+      - ./program:/home/wineuser/.wine/drive_c/Program Files (x86)/IPRoyalPawns
+    # ports:
+    #   - 3389:3389
+    command: wine /home/wineuser/.wine/drive_c/Program\ Files\ (x86)/IPRoyalPawns/iproyal_pawns.exe
+
