@@ -9,8 +9,13 @@ Install docker and docker-compose.
 1. Change to `RDP_SERVER: "yes"` in `docker-compose.yml`
 2. Uncomments `ports`
 3. `docker-compose up`
-4. Connect via RDP to `locahost:3389`, login: `wineuser`, password: `wineuser`
-5. Run program from `/home/wineuser/.wine/drive_c/Program\ Files\ (x86)/IPRoyalPawns/iproyal_pawns.exe`
+4. Connect via RDP to `localhost:3389`, login: `wineuser`, password: `wineuser`
+5. Run program from.
+
+    ```bash
+    wine /home/wineuser/.wine/drive_c/Program\ Files\ \(x86\)/IPRoyalPawns/iproyal_pawns.exe
+    ```
+
 6. Login to IPRoyal Pawns
 7. `docker-compose down`
 8. Change to `RDP_SERVER: "no"`
