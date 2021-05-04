@@ -27,4 +27,13 @@ After these instructions, the session files in the `session` directory should ch
 
 1. `docker-compose up -d`
 
-Now pawn should already be working in the container. To check the logs, you can call the `docker-compose logs` command and view the status of the application
+Now pawn should already be working in the container. To check the logs, you can call the `docker-compose logs` command and view the status of the application.
+
+## Update
+
+Download new installer.
+
+```bash
+cd Downloads && rm IPRoyalPawnsSetup.exe && wget https://download.iproyal.com/pawns/0.40.1/win64/IPRoyalPawnsSetup.exe
+```
+
